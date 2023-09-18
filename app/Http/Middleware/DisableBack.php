@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class EWASH
+class DisableBack
 {
     /**
      * Handle an incoming request.
@@ -15,11 +15,9 @@ class EWASH
      */
     public function handle(Request $request, Closure $next): Response
     {
-        dd($request->session());
         if($request->session()->has('autorize')==true){
-            return $next($request);
+            return redirect()->route('home');
         }
-        return back()->with('error','Silahkan Login dahulu');
-    
+        return $next($request);
     }
 }

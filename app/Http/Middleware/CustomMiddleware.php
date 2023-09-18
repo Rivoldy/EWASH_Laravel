@@ -19,6 +19,6 @@ class CustomMiddleware
         if($request->session()->has('autorize')==true){
             return $next($request);
         }
-        return back()->with('error','Anda harus login terlebih dahulu!');
+        return back()->with('error','Masukan NIK dan Password terlebih dahulu!');
     }
 }

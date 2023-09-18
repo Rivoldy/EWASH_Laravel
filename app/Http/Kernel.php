@@ -48,6 +48,9 @@ class Kernel extends HttpKernel
         'customAuth' => [
             \App\Http\Middleware\CustomMiddleware::class,
         ],
+        'DisableBack' => [
+            \App\Http\Middleware\DisableBack::class,
+        ],
 
         
     
