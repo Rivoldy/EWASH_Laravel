@@ -21,13 +21,15 @@ class LoginController extends Controller
     public function loginApi(Request $request){
 
        $request->validate([
+            'fty' => 'required',
             'nik' => 'required',
             'pass' =>'required',
         ]);
     
-        
+            $fty =  $request->fty;
             $nik =  $request->nik;
             $pass =  $request->pass;
+           
 
             //inisialisasi dlu
             $curl = curl_init();
@@ -39,7 +41,7 @@ class LoginController extends Controller
 
             //requestnya ke bodynya
             $data = array(
-                 
+                    'fty'=>$fty,
                     'nik'=>$nik,
                     'password'=>$pass,
                     'namaaplikasi'=>'ewash'
@@ -69,6 +71,9 @@ class LoginController extends Controller
               
                 if($tampung['success'] == true){
                     session(['autorize'=>true]);
+                    session(['fty' => $fty]);
+                    session(['name'=> $tampung ['data']['nama']]);
+                    session(['nik' => $tampung['data']['nik']]); 
                     return redirect('home');
                 }else{
                     return back()->with('Loginerror','NIK atau Password salah!');
@@ -82,20 +87,3 @@ class LoginController extends Controller
     
         
 }
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
- 

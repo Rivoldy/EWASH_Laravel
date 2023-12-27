@@ -99,7 +99,7 @@ if (isset($_POST['pl_id'])) {
       searching: false,
       bInfo: false,
     });
-    $('div.toolbar').html('<a target="_blank" href="report.php?id=<?= $id ?>" class="btn btn-danger"><i class="fal fa-file-pdf"></i> Export</a>');
+    $('div.toolbar').html('<a target="_blank" href="http://127.0.0.1:8000/storage/ewash/pages/rep_packlist/report.php?id=<?= $id ?>" class="btn btn-danger"><i class="fal fa-file-pdf"></i> Export</a>');
   </script>
   <style>
     .toolbar {

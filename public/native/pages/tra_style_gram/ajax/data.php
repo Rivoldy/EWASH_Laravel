@@ -43,7 +43,7 @@ if (isset($_POST['season'])) {
     function getgram(style) {
       $("#subkontent").html('<h6 class="pt-5 mt-5 text-center text-info"><i class="fad fa-spinner fa-spin"></i> Preparing your data..</h6>');
       $.ajax({
-        url: 'ajax/getgram.php',
+        url: 'http://127.0.0.1:8000/storage/ewash/pages/tra_style_gram/ajax/getgram.php',
         method: 'post',
         data: {
           style

@@ -168,7 +168,7 @@ $r1 = mysqli_fetch_array($q1);
             $('input[name=bid]').val('');
             if (a == 'sukses') {
               $.ajax({
-                url: 'ajax/index.php',
+                url: 'http://127.0.0.1:8000/storage/ewash/pages/tra_unpack/ajax/index.php',
                 method: 'post',
                 data: {
                   bid: bid,

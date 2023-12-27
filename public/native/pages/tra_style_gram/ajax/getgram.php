@@ -54,7 +54,7 @@ if (isset($_POST['style'])) {
           gram.push($(this).val());
         });
         $.ajax({
-          url: 'ajax/savegram.php',
+          url: 'http://127.0.0.1:8000/storage/ewash/pages/tra_style_gram/ajax/savegram.php',
           method: 'post',
           data: {
             style,

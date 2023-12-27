@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="{{asset('native/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('native/dist/css/adminlte.min.css')}}">
+
+  <link rel="stylesheet" href="{{asset('native/plugins/select2/css/select2.min.css')}}">
+  <link rel="stylesheet" href="{{asset('native/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -42,6 +45,15 @@
 
       <form action="{{asset ('loginApi') }}" method="post">
         @csrf
+
+        <div class="mb-3">
+          <select class="form-control select2" name="fty" style="width: 100%;">
+            <option></option>
+            <option value="14">Klego</option>
+            <option value="15">Sambi</option>
+          </select>
+        </div>
+
         <div class="input-group mb-3">
           <input name="nik" type="number" class="form-control" placeholder="NIK" required>
           <div class="input-group-append">
@@ -122,39 +134,80 @@
 </div>
 <!-- /.login-box -->
 
-<!-- jQuery -->
-<script src="{{asset('native/plugins/jquery/jquery.min.js')}}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{asset('native/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('native/dist/js/adminlte.min.js')}}"></script>
+<script src="{{ asset('native/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('native/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('native/plugins/moment/moment.min.js') }}"></script>
+<script src="{{ asset('native/plugins/select2/js/select2.full.min.js') }}"></script>
+<script src="{{ asset('native/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+<script src="{{ asset('native/dist/js/adminlte.min.js') }}"></script>
+
 <script>
-$(document).on('click', '#bnik', function() {
-    var id = $('#cnik').val();
-    $.ajax({
-        method: "POST",
-        url: "/native/ajax/ceknikp.php", // URL langsung ke file di dalam direktori public
-        data: {
-            id: id
-        },
-        success: function(hasil) {
-            if (hasil == 'nv') {
-                $("#content").hide();
-                $('#bchange').prop('disabled', true);
-                alert('NIK tidak terdaftar!!');
-            } else {
-                param = hasil.split(",..,");
-                $("#content").show();
-                $('#bchange').prop('disabled', false);
-                $('#lname').text(param[0]);
-                $('#lq1').text(param[1]);
-                $('#lq2').text(param[2]);
-            }
-            // $('#nama').val(hasil);
+    $(document).ready(function() {
+    // Initialize Select2 with options
+    $('select[name=fty]').select2({
+        placeholder: "Select Factory",
+        allowClear: true,
+        theme: "bootstrap4",
+        width: "100%", 
+        minimumResultsForSearch: Infinity, 
+        dropdownCssClass: "select2-bootstrap4" 
+    });
+
+    // Toggle password visibility
+    function togglePasswordVisibility() {
+        var passwordInput = $('input[name=pass]');
+        var passwordIcon = $('#lihatlihat');
+        if (passwordInput.attr('type') === 'password') {
+            passwordInput.attr('type', 'text');
+            passwordIcon.removeClass('fa-lock').addClass('fa-lock-open');
+        } else {
+            passwordInput.attr('type', 'password');
+            passwordIcon.removeClass('fa-lock-open').addClass('fa-lock');
         }
+    }
+
+    $('#lihatlihat').on('click', togglePasswordVisibility);
+
+    // Handle NIK validation and AJAX request
+    $('#bnik').on('click', function() {
+        var cnikInput = $('#cnik');
+        var nik = cnikInput.val();
+
+        // Validate NIK (you can add more validation as needed)
+        if (!nik || isNaN(nik)) {
+            alert('Please enter a valid NIK.');
+            return;
+        }
+
+        $.ajax({
+            method: "POST",
+            url: "{{asset('native/ajax/ceknikp.php')}}",
+            dataType: 'json',
+            data: {
+                id: nik
+            },
+            success: function(hasil) {
+                if (hasil.nv === 'nv') {
+                    $("#content").hide();
+                    $('#bchange').prop('disabled', true);
+                    alert('NIK is not registered.');
+                } else {
+                    $("#content").show();
+                    $('#bchange').prop('disabled', false);
+                    $('#lname').text(hasil.nama);
+                    $('#lq1').text(hasil.q1);
+                    $('#lq2').text(hasil.q2);
+                }
+            },
+            error: function() {
+                alert('An error occurred while processing your request.');
+            }
+        });
     });
 });
+
 </script>
+
 
 </body>
 </html>

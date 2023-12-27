@@ -51,7 +51,6 @@ class Kernel extends HttpKernel
         'DisableBack' => [
             \App\Http\Middleware\DisableBack::class,
         ],
-
         
     
     ];

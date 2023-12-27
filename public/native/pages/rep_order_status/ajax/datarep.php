@@ -102,7 +102,7 @@ if (isset($_POST['kp'])) {
       searching: false,
       bInfo: false,
     });
-    $('div.toolbar').html('<a target="_blank" href="report.php?style=<?= $style . '&' . $lem ?>" class="btn btn-danger"><i class="fal fa-file-pdf"></i> Export</a>');
+    $('div.toolbar').html('<a target="_blank" href="http://127.0.0.1:8000/storage/ewash/pages/rep_order_status/report.php?style=<?= $style . '&' . $lem ?>" class="btn btn-danger"><i class="fal fa-file-pdf"></i> Export</a>');
   </script>
   <style>
     .toolbar {

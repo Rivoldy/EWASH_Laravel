@@ -1,58 +1,115 @@
 @extends('layout.master')
 
-@section('content') 
+@section('content')
 <div class="row">
     <div class="col-12">
-      <div class="card">
-        <div class="card-header">
-          <div id="button">
-            <span style="float: right">
-              <a class="btn btn-success" href="{{route ('GroupAccess.create')}}"><i class="fa fa-plus"></i> New</a>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Group Access</h3>
+                <div class="card-tools">
+                    <form action="{{ route('GroupAccess.index') }}" method="GET">
+                        <div class="input-group input-group-sm" style="width: 300px;">
+                            <input type="text" name="search" class="form-control float-right" placeholder="Cari...">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                &nbsp; &nbsp;
+                                <div class="btn-group">
+                                    <a class="btn btn-primary btn-sm" href="#" onclick="openCreateModal('{{ route('GroupAccess.create') }}')">
+                                        <i class="fal fa-plus-circle"></i> New
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-          <h3 class="card-title">Group Access</h3>
+            <div class="card-body table-responsive p-0" style="height: 450px;">
+                <table class="table table-head-fixed text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Privilege</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @forelse ($tampung as $item => $value)
+                        <tr>
+                            <td>{{ $item + 1 }}</td>
+                            <td>{{ $value->group_access_name }}</td>
+                            <td>{{ $value->privilegeCount }}</td>
+                            <td>
+                                <a href="{{ route('GroupAccess.edit2', ['id' => $value->group_access_id]) }}"
+                                    class="btn btn-info btn-xs"><i class="fas fa-eye"></i></a>
+
+                                <button class="btn btn-warning btn-xs"
+                                    onclick="openEditModal('{{ route('GroupAccess.edit', ['GroupAccess' => $value->group_access_id]) }}')">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+
+                                @if ($value->privilegeCount == 0)
+                                <form action="{{ route('GroupAccess.destroy', $value->group_access_name) }}" method="POST"
+                                    style="display: inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-xs"
+                                        onclick="return confirm('Apakah Anda yakin menghapus data?')">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </form>
+                                @endif
+                            </td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="4">Tidak ada data.</td>
+                        </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+            <ul class="pagination float-right">
+                {{ $tampung->links('pagination::bootstrap-4') }}
+            </ul>
         </div>
-
-        <!-- /.card-header --> 
-        
-        <div class="card-body table-responsive p-0" style="height: 450px;">
-          <table class="table table-head-fixed text-nowrap">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Nama</th>
-                <th>Privilege</th>
-                <th>Action</th>
-              </tr>
-              
-            </thead>
-            <tbody>
-              @foreach ($tampung as $item)
-              <tr>
-                  <td>{{ $loop->iteration }}</td>
-                  <td>{{ $item->group_access_id }}</td>
-                  <td>{{ $item->group_access_name }}</td>
-                  <td>
-                    <a href="{{ route('PreGroupAccess.edit', ['PreGroupAccess' => $item->group_access_id]) }}"> <i class="fas fa-eye"></i></a>
-
-                    <a href="{{ route('GroupAccess.edit', ['GroupAccess' => $item->group_access_name]) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
-
-                    <form action="{{ route('GroupAccess.destroy', $item->group_access_name) }}" method="POST" style="display: inline;">
-                      @csrf
-                      @method('DELETE')
-                      <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin menghapus data?')">
-                          <i class="fa fa-trash"></i>
-                      </button>
-                  </form>
-                  </td>
-              </tr>
-              @endforeach              
-            </tbody>
-          </table>
-        </div>
-        <!-- /.card-body -->
-      </div>
-      <!-- /.card -->
     </div>
-  </div>
-    
+</div>
+
+<!-- Modal Edit Group Access -->
+<div class="modal fade" id="editGroupAccessModal" tabindex="-1" role="dialog"
+    aria-labelledby="editGroupAccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Konten modal akan dimuat melalui JavaScript -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Group Access -->
+<div class="modal fade" id="createGroupAccessModal" tabindex="-1" role="dialog"
+    aria-labelledby="createGroupAccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Konten modal akan dimuat melalui JavaScript -->
+        </div>
+    </div>
+</div>
+
+<script>
+    function openEditModal(url) {
+        $.get(url, function(data) {
+            $('#editGroupAccessModal .modal-content').html(data);
+            $('#editGroupAccessModal').modal('show');
+        });
+    }
+
+    function openCreateModal(url) {
+        $.get(url, function(data) {
+            $('#createGroupAccessModal .modal-content').html(data);
+            $('#createGroupAccessModal').modal('show');
+        });
+    }
+</script>
+
 @endsection

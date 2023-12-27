@@ -1,10 +1,10 @@
 <?php
 session_start();
 include '../encdec/sclass.php';
-$hostname  = "192.168.155.109";
-$username  = "webadmin";
-$password  = "2021masihpakaisql?";
-$dbname  = "userman";
+$hostname  = "192.168.100.190";
+$username  = "kampusmerdeka";
+$password  = "Magang@12";
+$dbname  = "ewash";
 $logs = mysqli_connect($hostname, $username, $password, $dbname);
 $cnik = $_POST['cnik'];
 $ans1 = $_POST['ans1'];

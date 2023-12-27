@@ -159,7 +159,7 @@ if ($da['otentikasi'] == "False" or $da['otentikasi'] == "") {
         var reason = '<?= $reason ?>';
         var dono = '<?= $dono ?>';
         $.ajax({
-          url: 'ajax/cekunscan.php',
+          url: 'http://127.0.0.1:8000/storage/ewash/pages/tra_unpack/ajax/cekunscan.php',
           method: 'post',
           data: {
             packkey,
@@ -180,7 +180,7 @@ if ($da['otentikasi'] == "False" or $da['otentikasi'] == "") {
               alert('Gagal Unpack! Carton tidak terdaftar atas DO ' + dono);
             } else {
               $.ajax({
-                url: 'ajax/getcarton.php',
+                url: 'http://127.0.0.1:8000/storage/ewash/pages/tra_unpack/ajax/getcarton.php',
                 method: 'post',
                 data: {
                   carton: a

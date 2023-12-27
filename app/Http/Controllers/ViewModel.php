@@ -2,17 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\group_access;
+use App\Models\role_access;
+use App\Models\menu;
+use Alert;
+
 class ViewModel extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tampung=group_access::get();
-        return view ('models.group_access', ['tampung'=>$tampung]);
+        $search = $request->input('search');
+        $tampung = group_access::where('group_access_name', 'like', '%' . $search . '%')
+            ->paginate(7);
+
+        foreach ($tampung as $groupAccess) {
+            $groupAccess->privilegeCount = role_access::where('role_access_group_access_id', $groupAccess->group_access_id)
+                ->count();
+        }
+
+        return view('models.group_access', ['tampung' => $tampung, 'search' => $search]);
     }
 
     /**
@@ -28,14 +41,21 @@ class ViewModel extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'group_access_name' => 'required',
+        ]);
 
-    // Simpan data ke dalam tabel "group_access_name"
-    group_access::create([
-        'group_access_name' => $request->input('group_access_name'),
-    ]);
+        $group = new group_access;
 
-    return redirect()->route('GroupAccess.index')->with('success', 'Data Group Access berhasil ditambahkan');
+        $group->group_access_name = $request->group_access_name;
 
+        if ($group->save()) {
+            Alert::success('Success', 'Menambahkan Group User Baru');
+            return redirect('/GroupAccess');
+        } else {
+            Alert::error('Gagal', 'Terjadi kesalahan saat menambahkan Group User Baru');
+            return redirect()->back();
+        }
     }
 
     /**
@@ -43,7 +63,7 @@ class ViewModel extends Controller
      */
     public function show(string $id)
     {
-        //
+        // Tambahkan logika tampilan data sesuai ID jika diperlukan.
     }
 
     /**
@@ -51,12 +71,18 @@ class ViewModel extends Controller
      */
     public function edit(string $id)
     {
-        $groupAccess = group_access::where('group_access_name', $id)->first();
-        if (!$groupAccess) {
-            // Handle jika data tidak ditemukan
-        }
-        return view('models.edit_group_access', compact('GroupAccess'));
+        $groupAccess = group_access::find($id);
+        return view('models.edit_group_access', ['groupAccess' => $groupAccess]);
     }
+
+    public function edit2($id)
+{
+    $menu = menu::latest()->get();
+    $roleAccess = role_access::find($id);
+
+    return view('models.edit_privilege', ['menu' => $menu, 'id' => $id, 'roleAccess' => $roleAccess]);
+}
+
 
     /**
      * Update the specified resource in storage.
@@ -64,19 +90,65 @@ class ViewModel extends Controller
     public function update(Request $request, string $id)
     {
         $groupAccess = group_access::where('group_access_name', $id)->first();
-    if (!$groupAccess) {
-        // Handle jika data tidak ditemukan
+        if (!$groupAccess) {
+            // Handle jika data tidak ditemukan
+        }
+
+        $groupAccess->update([
+            'group_access_name' => $request->input('group_access_name'),
+        ]);
+
+        $roleAccess = role_access::where('role_access_group_access_id', $groupAccess->group_access_id)->first();
+
+        if ($roleAccess) {
+            $roleAccess->update([
+                'role_access' => $request->input('privilege'),
+            ]);
+        }
+        Alert::success('success', 'Data berhasil diperbarui');
+        return redirect()->route('GroupAccess.index');
     }
 
-    // Validasi data yang diinputkan oleh pengguna (gunakan $request->validate)
+    
+    public function updateBatch(Request $request, $id)
+    {
+        $request->validate([
+            'role_access' => 'required',
+        ]);
+        try{
+            $roleAccessData = $request->input('role_access');
+            $selected = $request->input('check_privilege');
 
-    $groupAccess->update([
-        'group_access_name' => $request->input('group_access_name'),
-        // Tambahkan kolom lain yang perlu diubah sesuai dengan tabel Anda
-    ]);
+            foreach ($selected as $roleId => $chk) {
+                $roles = role_access::find($roleId);
+    
+                if ($roles) {
+                    $roles->update([
+                        'selected' => $chk,
+                    ]);
+                }
+            }
 
-    return redirect()->route('GroupAccess.index')->with('success', 'Data berhasil diperbarui');
+            foreach ($roleAccessData as $roleId => $accessLevel) {
+                $roles = role_access::find($roleId);
+    
+                if ($roles) {
+                    $roles->update([
+                        'role_access' => $accessLevel,
+                    ]);
+                }
+            }
+       
+        return response()->json(['success' => true]); 
+        Alert::success('Success', 'Update Berhasil');
+        }catch (\Exception $e) {
+        return response()->json(['success' => false, 'message' => $e->getMessage()]);
     }
+        
+    }
+
+
+    
 
     /**
      * Remove the specified resource from storage.
@@ -87,10 +159,32 @@ class ViewModel extends Controller
 
         if ($groupAccess) {
             $groupAccess->delete();
+            Alert::success('success', 'Data berhasil dihapus');
             return redirect()->route('GroupAccess.index')->with('success', 'Data berhasil dihapus');
         }
-    
+
         return redirect()->route('GroupAccess.index')->with('error', 'Data tidak ditemukan');
     }
+
+    public function editPrivilege($id)
+    {
+        $groupAccess = group_access::where('group_access_id', $id)->first();
+        if (!$groupAccess) {
+            // Handle if data is not found
+        }
     
+        $roleAccess = role_access::where('role_access_group_access_id', $groupAccess->group_access_id)->get();
+    
+        // Fetch the menu data
+        $menu = menu::latest()->get();
+    
+        // Debugging: Print menu data
+        dd($menu);
+    
+        return view('models.edit_privilege', compact('groupAccess', 'roleAccess', 'menu'));
+    }
+    
+
+
+
 }
