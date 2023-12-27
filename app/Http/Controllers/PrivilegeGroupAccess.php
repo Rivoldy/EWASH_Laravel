@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\group_access;
-class ViewModel extends Controller
+class PrivilegeGroupAccess extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -30,11 +30,11 @@ class ViewModel extends Controller
     {
 
     // Simpan data ke dalam tabel "group_access_name"
-    group_access::create([
-        'group_access_name' => $request->input('group_access_name'),
-    ]);
+    // group_access::create([
+    //     'group_access_id' => $request->input('group_access_id'),
+    // ]);
 
-    return redirect()->route('GroupAccess.index')->with('success', 'Data Group Access berhasil ditambahkan');
+    // return redirect()->route('PrivilegeGroupAccess.index')->with('success', 'Data Group Access berhasil ditambahkan');
 
     }
 
@@ -51,11 +51,11 @@ class ViewModel extends Controller
      */
     public function edit(string $id)
     {
-        $groupAccess = group_access::where('group_access_name', $id)->first();
-        if (!$groupAccess) {
+        $PreGroupAccess = group_access::where('group_access_id', $id)->first();
+        if (!$PreGroupAccess) {
             // Handle jika data tidak ditemukan
         }
-        return view('models.edit_group_access', compact('GroupAccess'));
+        return view('models.privilege_edit_group_access', compact('PreGroupAccess'));
     }
 
     /**
@@ -63,19 +63,19 @@ class ViewModel extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $groupAccess = group_access::where('group_access_name', $id)->first();
-    if (!$groupAccess) {
+        $PreGroupAccess = group_access::where('group_access_id', $id)->first();
+    if (!$PreGroupAccess) {
         // Handle jika data tidak ditemukan
     }
 
     // Validasi data yang diinputkan oleh pengguna (gunakan $request->validate)
 
-    $groupAccess->update([
-        'group_access_name' => $request->input('group_access_name'),
+    $PreGroupAccess->update([
+        'group_access_id' => $request->input('group_access_id'),
         // Tambahkan kolom lain yang perlu diubah sesuai dengan tabel Anda
     ]);
 
-    return redirect()->route('GroupAccess.index')->with('success', 'Data berhasil diperbarui');
+    return redirect()->route('PreGroupAccess.index')->with('success', 'Data berhasil diperbarui');
     }
 
     /**
@@ -83,14 +83,14 @@ class ViewModel extends Controller
      */
     public function destroy(string $id)
     {
-        $groupAccess = group_access::where('group_access_name', $id)->first();
+        // $groupAccess = group_access::where('group_access_name', $id)->first();
 
-        if ($groupAccess) {
-            $groupAccess->delete();
-            return redirect()->route('GroupAccess.index')->with('success', 'Data berhasil dihapus');
-        }
+        // if ($groupAccess) {
+        //     $groupAccess->delete();
+        //     return redirect()->route('GroupAccess.index')->with('success', 'Data berhasil dihapus');
+        // }
     
-        return redirect()->route('GroupAccess.index')->with('error', 'Data tidak ditemukan');
+        // return redirect()->route('GroupAccess.index')->with('error', 'Data tidak ditemukan');
     }
     
 }
