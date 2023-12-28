@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2023-12-28T07:29:12.334Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="i9WfFjFutEuyvCzXmtdc" version="22.1.15" type="github" pages="2">
-  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+<mxfile host="app.diagrams.net" modified="2023-12-28T08:12:07.385Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="MBiYKvbWWlChicks7Hmz" version="22.1.15" type="github" pages="6">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Login">
     <mxGraphModel dx="872" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -97,7 +97,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="-CRl-Vx9_pGXMxLFo0b9-29" value="Masukan Password Baru" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="-CRl-Vx9_pGXMxLFo0b9-29" value="Masukan Password Baru" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="140" y="990" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-CRl-Vx9_pGXMxLFo0b9-37" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -112,16 +112,295 @@
         <mxCell id="0kTefaBVPV0P1nhqc0VG-0" value="Select Factory" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="150" y="110" width="140" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="0kTefaBVPV0P1nhqc0VG-2" value="Ewash Login" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="90" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="kOIOTFkpZEXrJhmwikV1" name="Page-2">
+  <diagram id="kOIOTFkpZEXrJhmwikV1" name="Report Order Status">
     <mxGraphModel dx="872" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="iKJ4n3FRONShpF4PT0Nt-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="A3FJMUZfOVh59jfvpA62-1" target="iKJ4n3FRONShpF4PT0Nt-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="A3FJMUZfOVh59jfvpA62-1" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="20" width="120" height="60" as="geometry" />
+          <mxGeometry x="120" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iKJ4n3FRONShpF4PT0Nt-1" target="SWGjXxWr8MYK86rRVYp0-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iKJ4n3FRONShpF4PT0Nt-1" value="Select Style" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iKJ4n3FRONShpF4PT0Nt-3" value="&lt;div style=&quot;box-sizing: border-box; padding: 0.75rem 1.25rem; margin-bottom: 0px; background-color: transparent; border-bottom: 1px solid rgba(0, 0, 0, 0.125); position: relative; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; color: rgb(33, 37, 41); font-family: &amp;quot;Source Sans Pro&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Helvetica Neue&amp;quot;, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 14px; text-align: left;&quot; class=&quot;card-header&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="5" width="60" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-8" value="Report Order Status" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SWGjXxWr8MYK86rRVYp0-9" target="SWGjXxWr8MYK86rRVYp0-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-9" value="Select KP" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SWGjXxWr8MYK86rRVYp0-13" target="SWGjXxWr8MYK86rRVYp0-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-13" value="Find" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SWGjXxWr8MYK86rRVYp0-14" target="SWGjXxWr8MYK86rRVYp0-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-14" value="Data Table" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SWGjXxWr8MYK86rRVYp0-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-16" value="Report Print to Pdf" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="590" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SWGjXxWr8MYK86rRVYp0-23" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Report Per PackingList" id="hEK89H_l6iKrrc4xdMZD">
+    <mxGraphModel dx="1699" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-0" />
+        <mxCell id="Z1lSkrPftN4ov-oICadG-1" parent="Z1lSkrPftN4ov-oICadG-0" />
+        <mxCell id="Z1lSkrPftN4ov-oICadG-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Z1lSkrPftN4ov-oICadG-1" source="Z1lSkrPftN4ov-oICadG-3" target="Z1lSkrPftN4ov-oICadG-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-3" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Z1lSkrPftN4ov-oICadG-1">
+          <mxGeometry x="120" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Z1lSkrPftN4ov-oICadG-1" source="Z1lSkrPftN4ov-oICadG-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-5" value="Select Packing List" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="Z1lSkrPftN4ov-oICadG-1">
+          <mxGeometry x="110" y="150" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-6" value="&lt;div style=&quot;box-sizing: border-box; padding: 0.75rem 1.25rem; margin-bottom: 0px; background-color: transparent; border-bottom: 1px solid rgba(0, 0, 0, 0.125); position: relative; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; color: rgb(33, 37, 41); font-family: &amp;quot;Source Sans Pro&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Helvetica Neue&amp;quot;, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 14px; text-align: left;&quot; class=&quot;card-header&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Z1lSkrPftN4ov-oICadG-1">
+          <mxGeometry x="80" y="5" width="60" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-7" value="Report Per PackingList" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Z1lSkrPftN4ov-oICadG-1">
+          <mxGeometry x="-10" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Z1lSkrPftN4ov-oICadG-1" source="Z1lSkrPftN4ov-oICadG-11" target="Z1lSkrPftN4ov-oICadG-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-11" value="Find" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Z1lSkrPftN4ov-oICadG-1">
+          <mxGeometry x="120" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Z1lSkrPftN4ov-oICadG-1" source="Z1lSkrPftN4ov-oICadG-13" target="Z1lSkrPftN4ov-oICadG-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-13" value="Data Table" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="Z1lSkrPftN4ov-oICadG-1">
+          <mxGeometry x="120" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jRGIOBc84ZM888XJcwOe-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Z1lSkrPftN4ov-oICadG-1" source="Z1lSkrPftN4ov-oICadG-15" target="Z1lSkrPftN4ov-oICadG-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-15" value="Report Print to Pdf" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;" vertex="1" parent="Z1lSkrPftN4ov-oICadG-1">
+          <mxGeometry x="120" y="490" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1lSkrPftN4ov-oICadG-16" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Z1lSkrPftN4ov-oICadG-1">
+          <mxGeometry x="120" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Report Scanned Packing List" id="mIuCtg5gsqd40QIycMTg">
+    <mxGraphModel dx="872" dy="1650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-0" />
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-1" parent="CJBzUKSU36ZjudQ6pV-A-0" />
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="CJBzUKSU36ZjudQ6pV-A-1" source="CJBzUKSU36ZjudQ6pV-A-3" target="CJBzUKSU36ZjudQ6pV-A-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-3" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="CJBzUKSU36ZjudQ6pV-A-1">
+          <mxGeometry x="120" y="-40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVey0WP8imdR9Mq_1VWl-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="CJBzUKSU36ZjudQ6pV-A-1" source="CJBzUKSU36ZjudQ6pV-A-5" target="PVey0WP8imdR9Mq_1VWl-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-5" value="Select Style" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;arcSize=35;" vertex="1" parent="CJBzUKSU36ZjudQ6pV-A-1">
+          <mxGeometry x="120" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-6" value="&lt;div style=&quot;box-sizing: border-box; padding: 0.75rem 1.25rem; margin-bottom: 0px; background-color: transparent; border-bottom: 1px solid rgba(0, 0, 0, 0.125); position: relative; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; color: rgb(33, 37, 41); font-family: &amp;quot;Source Sans Pro&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Helvetica Neue&amp;quot;, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 14px; text-align: left;&quot; class=&quot;card-header&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="CJBzUKSU36ZjudQ6pV-A-1">
+          <mxGeometry x="80" y="5" width="60" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-7" value="Report Scanned Packing List" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="CJBzUKSU36ZjudQ6pV-A-1">
+          <mxGeometry y="-90" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="CJBzUKSU36ZjudQ6pV-A-1" source="CJBzUKSU36ZjudQ6pV-A-9" target="CJBzUKSU36ZjudQ6pV-A-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-9" value="Select Tanggal" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="CJBzUKSU36ZjudQ6pV-A-1">
+          <mxGeometry x="120" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="CJBzUKSU36ZjudQ6pV-A-1" source="CJBzUKSU36ZjudQ6pV-A-11" target="CJBzUKSU36ZjudQ6pV-A-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-11" value="Find" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="CJBzUKSU36ZjudQ6pV-A-1">
+          <mxGeometry x="120" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="CJBzUKSU36ZjudQ6pV-A-1" source="CJBzUKSU36ZjudQ6pV-A-13" target="CJBzUKSU36ZjudQ6pV-A-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-13" value="Data Table" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="CJBzUKSU36ZjudQ6pV-A-1">
+          <mxGeometry x="120" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="CJBzUKSU36ZjudQ6pV-A-1" source="CJBzUKSU36ZjudQ6pV-A-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-15" value="Report Print to Pdf" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;" vertex="1" parent="CJBzUKSU36ZjudQ6pV-A-1">
+          <mxGeometry x="120" y="590" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CJBzUKSU36ZjudQ6pV-A-16" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="CJBzUKSU36ZjudQ6pV-A-1">
+          <mxGeometry x="120" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVey0WP8imdR9Mq_1VWl-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="CJBzUKSU36ZjudQ6pV-A-1" source="PVey0WP8imdR9Mq_1VWl-1" target="CJBzUKSU36ZjudQ6pV-A-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVey0WP8imdR9Mq_1VWl-1" value="Select KP" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;arcSize=35;" vertex="1" parent="CJBzUKSU36ZjudQ6pV-A-1">
+          <mxGeometry x="120" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Report Detail PackingList" id="PQoQVdHpalwBhLM3nriC">
+    <mxGraphModel dx="872" dy="1650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-0" />
+        <mxCell id="30lPUfD_a17FI1FBaZMh-1" parent="30lPUfD_a17FI1FBaZMh-0" />
+        <mxCell id="30lPUfD_a17FI1FBaZMh-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="30lPUfD_a17FI1FBaZMh-1" source="30lPUfD_a17FI1FBaZMh-3" target="30lPUfD_a17FI1FBaZMh-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-3" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="30lPUfD_a17FI1FBaZMh-1">
+          <mxGeometry x="120" y="-40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="30lPUfD_a17FI1FBaZMh-1" source="30lPUfD_a17FI1FBaZMh-5" target="30lPUfD_a17FI1FBaZMh-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-5" value="Select Style" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;arcSize=35;" vertex="1" parent="30lPUfD_a17FI1FBaZMh-1">
+          <mxGeometry x="120" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-6" value="&lt;div style=&quot;box-sizing: border-box; padding: 0.75rem 1.25rem; margin-bottom: 0px; background-color: transparent; border-bottom: 1px solid rgba(0, 0, 0, 0.125); position: relative; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; color: rgb(33, 37, 41); font-family: &amp;quot;Source Sans Pro&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Helvetica Neue&amp;quot;, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 14px; text-align: left;&quot; class=&quot;card-header&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="30lPUfD_a17FI1FBaZMh-1">
+          <mxGeometry x="80" y="5" width="60" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-7" value="Report Detail PackingList" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="30lPUfD_a17FI1FBaZMh-1">
+          <mxGeometry x="10" y="-90" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="30lPUfD_a17FI1FBaZMh-1" source="30lPUfD_a17FI1FBaZMh-9" target="30lPUfD_a17FI1FBaZMh-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-9" value="Select Tanggal" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="30lPUfD_a17FI1FBaZMh-1">
+          <mxGeometry x="120" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="30lPUfD_a17FI1FBaZMh-1" source="30lPUfD_a17FI1FBaZMh-11" target="30lPUfD_a17FI1FBaZMh-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-11" value="Find" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30lPUfD_a17FI1FBaZMh-1">
+          <mxGeometry x="120" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="30lPUfD_a17FI1FBaZMh-1" source="30lPUfD_a17FI1FBaZMh-13" target="30lPUfD_a17FI1FBaZMh-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-13" value="Data Table" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="30lPUfD_a17FI1FBaZMh-1">
+          <mxGeometry x="120" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="30lPUfD_a17FI1FBaZMh-1" source="30lPUfD_a17FI1FBaZMh-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-15" value="Report Print to Pdf" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;" vertex="1" parent="30lPUfD_a17FI1FBaZMh-1">
+          <mxGeometry x="120" y="590" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-16" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="30lPUfD_a17FI1FBaZMh-1">
+          <mxGeometry x="120" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="30lPUfD_a17FI1FBaZMh-1" source="30lPUfD_a17FI1FBaZMh-18" target="30lPUfD_a17FI1FBaZMh-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="30lPUfD_a17FI1FBaZMh-18" value="Select KP" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;arcSize=35;" vertex="1" parent="30lPUfD_a17FI1FBaZMh-1">
+          <mxGeometry x="120" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Report Loaded PackingList" id="bI2dfvVoQDesopFcgC9o">
+    <mxGraphModel dx="872" dy="1650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-0" />
+        <mxCell id="ombbdjLCUE9hPjUoghMc-1" parent="ombbdjLCUE9hPjUoghMc-0" />
+        <mxCell id="ombbdjLCUE9hPjUoghMc-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ombbdjLCUE9hPjUoghMc-1" source="ombbdjLCUE9hPjUoghMc-3" target="ombbdjLCUE9hPjUoghMc-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-3" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ombbdjLCUE9hPjUoghMc-1">
+          <mxGeometry x="120" y="-40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ombbdjLCUE9hPjUoghMc-1" source="ombbdjLCUE9hPjUoghMc-5" target="ombbdjLCUE9hPjUoghMc-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-5" value="Select Style" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;arcSize=35;" vertex="1" parent="ombbdjLCUE9hPjUoghMc-1">
+          <mxGeometry x="120" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-6" value="&lt;div style=&quot;box-sizing: border-box; padding: 0.75rem 1.25rem; margin-bottom: 0px; background-color: transparent; border-bottom: 1px solid rgba(0, 0, 0, 0.125); position: relative; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; color: rgb(33, 37, 41); font-family: &amp;quot;Source Sans Pro&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Helvetica Neue&amp;quot;, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 14px; text-align: left;&quot; class=&quot;card-header&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="ombbdjLCUE9hPjUoghMc-1">
+          <mxGeometry x="80" y="5" width="60" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-7" value="Report Loaded PackingList" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="ombbdjLCUE9hPjUoghMc-1">
+          <mxGeometry x="5" y="-90" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ombbdjLCUE9hPjUoghMc-1" source="ombbdjLCUE9hPjUoghMc-9" target="ombbdjLCUE9hPjUoghMc-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-9" value="Select Tanggal" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="ombbdjLCUE9hPjUoghMc-1">
+          <mxGeometry x="120" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ombbdjLCUE9hPjUoghMc-1" source="ombbdjLCUE9hPjUoghMc-11" target="ombbdjLCUE9hPjUoghMc-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-11" value="Find" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ombbdjLCUE9hPjUoghMc-1">
+          <mxGeometry x="120" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ombbdjLCUE9hPjUoghMc-1" source="ombbdjLCUE9hPjUoghMc-13" target="ombbdjLCUE9hPjUoghMc-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-13" value="Data Table" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="ombbdjLCUE9hPjUoghMc-1">
+          <mxGeometry x="120" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ombbdjLCUE9hPjUoghMc-1" source="ombbdjLCUE9hPjUoghMc-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-15" value="Report Print to Pdf" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;" vertex="1" parent="ombbdjLCUE9hPjUoghMc-1">
+          <mxGeometry x="120" y="590" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-16" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ombbdjLCUE9hPjUoghMc-1">
+          <mxGeometry x="120" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ombbdjLCUE9hPjUoghMc-1" source="ombbdjLCUE9hPjUoghMc-18" target="ombbdjLCUE9hPjUoghMc-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ombbdjLCUE9hPjUoghMc-18" value="Select KP" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;arcSize=35;" vertex="1" parent="ombbdjLCUE9hPjUoghMc-1">
+          <mxGeometry x="120" y="160" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
